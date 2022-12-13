@@ -1,6 +1,5 @@
 /*
 HTML містить <iframe> з відео для Vimeo плеєра. Напиши скрипт, який буде зберігати поточний час відтворення відео у локальне сховище і, після перезавантаження сторінки, продовжувати відтворювати відео з цього часу.
-
  1. Ознайомся з документацією бібліотеки Vimeo плеєра.
  2. Додай бібліотеку як залежність проекту через npm.
  3. Ініціалізуй плеєр у файлі скрипта як це описано в секції pre-existing player, але враховуй, що у тебе плеєр доданий як npm пакет, а не через CDN.
@@ -17,7 +16,6 @@ const iframe = document.querySelector('#vimeo-player');
 const player = new Player(iframe);
 
 const throttledPlayPrint = throttle(function (event) {
-  //console.log('Time, sec: ' + ev.seconds);
   localStorage.setItem('videoplayer-current-time', event.seconds);
 }, 1000);
 
